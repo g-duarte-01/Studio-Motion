@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animação</title>
+    <style>
+        body {
+            background-color:#161b22;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Centraliza verticalmente */
+            height: 100vh; /* Garante altura da tela toda */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body > * {
+            margin: 20px 0;
+        }
+
+        /* Animação de piscar */
+        @keyframes blink {
+            0%, 50% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+
+        /* Animação de shake */
+        @keyframes shake {
+            0%, 100% {transform: translateX(0);}
+            25% {transform: translateX(-5px);}
+            75% {transform: translateX(5px);}
+        }
+
+        .shake {
+            animation: shake 0.5s infinite;
+            background-color: rgb(134, 139, 135);
+            color: rgb(197, 186, 186);
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 20px;
+        }
+
+        /* Animação de spin */
+        @keyframes spin {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(360deg);}
+        }
+
+        .spin {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgb(255, 255, 255);
+            border-top: 5px solid rgb(185, 50, 50);
+            border-radius: 100%;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="spin"></div>
+    <div class="shake"><a href="index.html" class="enter-button"> bem vindo </a>
+    
+    </div>
+   
+</body>
+</html>
